@@ -1,18 +1,63 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Poppins } from 'next/font/google';
+import localFont from 'next/font/local';
 
 // https://dbtek.medium.com/add-code-formatting-with-prettier-to-next-js-project-b53c93ffdf91 Auto format setup
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-poppins',
+const workSans = localFont({
+  src: [
+    {
+      path: './fonts/WorkSans-Black.ttf',
+      weight: '900',
+      style: 'normal',
+    },
+    {
+      path: './fonts/WorkSans-ExtraBold.ttf',
+      weight: '800',
+      style: 'normal',
+    },
+    {
+      path: './fonts/WorkSans-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/WorkSans-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: './fonts/WorkSans-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/WorkSans-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/WorkSans-Black.ttf',
+      weight: '900',
+      style: 'normal',
+    },
+    {
+      path: './fonts/WorkSans-Thin.ttf',
+      weight: '200',
+      style: 'normal',
+    },
+    {
+      path: './fonts/WorkSans-ExtraLight.ttf',
+      weight: '100',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-work-sans',
 });
 
 export const metadata: Metadata = {
-  title: 'StoreIt',
-  description: 'Store It - the only solution to store your data.',
+  title: 'YC Directory',
+  description: 'brain storm your ideas.',
 };
 
 export default function RootLayout({
@@ -22,7 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} font-poppins antialiased`}>{children}</body>
+      <body className={`${workSans.variable}`}>{children}</body>
     </html>
   );
 }
