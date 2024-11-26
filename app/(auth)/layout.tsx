@@ -3,13 +3,12 @@ import React from 'react';
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="h-screen w-full">
-      <div className="flex h-full w-[40%] flex-col justify-center space-y-20 bg-brand-100 p-10">
+    <div className="grid h-screen grid-cols-2">
+      <div className="flex h-full flex-col justify-center space-y-20 bg-brand-100 p-10">
         <div className="flex items-center space-x-3">
           <div>
-            <Image src="/logo.png" width={50} height={50} alt="" />
+            <Image src="/assets/icons/logo-full.svg" width={200} height={200} alt="" />
           </div>
-          <h3 className="text-2xl font-semibold text-white">Store It</h3>
         </div>
         <div className="space-y-5">
           <h1 className="h1 text-white">Manage your files the best way</h1>
@@ -21,7 +20,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
           <Image src="/assets/images/files.png" width={300} height={300} alt="" />
         </div>
       </div>
-      <div className="w-[60%]">{children}</div>
+      <div className="flex items-center justify-center">{children}</div>
     </div>
   );
 }
