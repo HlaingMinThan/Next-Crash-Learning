@@ -46,7 +46,7 @@ const StartupCard = ({ post }: { post: any }) => {
 
       <div className="flex-between mt-5 gap-3">
         <Link href={`/?query=${category?.toLowerCase()}`}>
-          <p className="text-16-medium">{category}</p>
+          <p className="text-16-medium">{'Robots'}</p>
         </Link>
         <Button className="startup-card_btn" asChild>
           <Link href={`/startup/${_id}`}>Details</Link>
